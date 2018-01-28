@@ -1,0 +1,14 @@
+Dim Name As String=" "
+Dim MemberID As Integer=0
+
+FileOpen(1,"d:\Practices\record.txt",Openmode:Input)
+
+While EOF (1)=False
+  Input(1,Name)
+  Input(1,MemberID)
+  Console.Writeline("Name:" & Name)
+  Console.Writeline("MemberID number:"&MemberID)
+EndWhile
+
+FileClose(1)
+Console.ReadKey ()
