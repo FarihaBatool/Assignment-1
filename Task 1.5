@@ -1,0 +1,31 @@
+Dim Name As String=" "
+Dim MemberID As Integer=0
+Dim Tnumber As String=" "
+Dim MSdate As Date
+
+FileOpen(1,d:\Practices\record.txt",OpenMode.Input)
+FileOpen(2,d:\Practices\temp.txt,OpenMode.Output)
+
+While Not EOF(1)
+
+  Input(1,name)
+  Input(1,memberID)
+  
+  Console.Writeline("Enter telephone number:")
+  Tnumber=Console.Readline
+  Console.Writeline("Enter membership start date:")
+  MSdate=Console.Readline
+  
+  Writeline(2,name)
+  Writeline(2,memberID)
+  Writeline(2,Tnumber)
+  Writeline(2,MSdate)
+  
+EndWhile
+
+FileClose(1)
+File(2)
+
+MyComputer.FileSystem.DeleteFile("d:\Practices\records.txt")
+MyComputer.FileSystem.DeleteFile("d:\Practices\temp.txt","SportsClub.txt")
+  
