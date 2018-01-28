@@ -1,0 +1,26 @@
+Dim Name As String=" "
+Dim MemberID As Integer=0
+Dim RSF As Srting
+Dim isFound As Boolean
+isFound=False
+
+Console.Writeline("Enter name to search:")
+RSF=Console.Readline
+
+FileOpen(1,"d:\Practices\record.txt",Openmode:Input)
+
+While Not EOF(1) And isFound=False
+  Input(1,name)
+  Input(1,memberID)
+
+  If Name=RSF Then 
+    isFound=True
+
+    Console.Writeline("member name;"&name)
+    Console.Writeline(memberID:"&memberID)
+  EndIf
+EndWhile
+FileClose(1)
+If isFound=False Then
+Console.Writeline("Record not found")
+Console.ReadKey()
